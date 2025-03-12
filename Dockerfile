@@ -23,10 +23,8 @@ COPY --from=builder /usr/local/bundle /usr/local/bundle
 RUN mkdir -p /root/.ssh/ && \
     echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > /root/.ssh/config
 
-RUN echo '#!/bin/bash\n\
-    eval $(ssh-agent -s)\n\
-    exec "$@"' > /entrypoint.sh && \
-        chmod +x /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/sbin/tini", "--", "/entrypoint.sh"]
 CMD ["/bin/bash"]
