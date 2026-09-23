@@ -67,6 +67,7 @@ GEM
       ostruct
     whenever (1.1.3)
       chronic (>= 0.6.3)
+    x25519 (1.0.11)
 
 PLATFORMS
   arm64-darwin
@@ -74,7 +75,7 @@ PLATFORMS
   x86_64-darwin
 
 DEPENDENCIES
-  bcrypt_pbkdf (~> 1.1)
+  bcrypt_pbkdf (>= 1.0, < 2.0)
   capistrano (~> 3.20)
   capistrano-bundler (~> 2.2)
   capistrano-mise (~> 0.1)
@@ -82,10 +83,11 @@ DEPENDENCIES
   capistrano-rvm (~> 0.1.2)
   capistrano-sidekiq (~> 3.2)
   capistrano3-puma (~> 8.1)
-  ed25519 (~> 1.4)
+  ed25519 (>= 1.2, < 2.0)
   rake
   rollbar (~> 3.8)
   whenever (~> 1.1)
+  x25519 (~> 1.0)
 
 CHECKSUMS
   airbrussh (1.6.2) sha256=3278655b2d957d774589a17e01496149288cbd8f1158b377581d82db006401cc
@@ -121,6 +123,7 @@ CHECKSUMS
   sidekiq (8.1.7) sha256=91ad48c7e6c32e1846bf1d5b74c27948758049b93fed0cb539f8d586c7de3415
   sshkit (1.25.1) sha256=be3f10b9d6eb0b44d5eaba3f7cbe41bc6bb894bce4339688ac20124391455b78
   whenever (1.1.3) sha256=162f35defb5cca5392aeafe4cb1700f9d112e0f3a86c90f6731ecae29ee921b0
+  x25519 (1.0.11) sha256=24168680ded91fdd06a4b3c2b0800c71dc149c71265ba57d91df5832a7002b6d
 
 BUNDLED WITH
   4.0.21
